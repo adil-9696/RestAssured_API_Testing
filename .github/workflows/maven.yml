@@ -26,7 +26,7 @@ jobs:
       uses: actions/upload-artifact@v7.0.1
       with: 
         name: Surefire-reports
-        path: target/Surefire-reports
+        path: target/surefire-reports
 
      
     
