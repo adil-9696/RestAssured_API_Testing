@@ -1,0 +1,11 @@
+<suite name="Suite1" verbose="1">
+  <test name="Rest_Assured_APITests-Phoenix">
+    <classes>
+       <class name="phoenix_api_automation_framework.LoginAPITest"/>
+       <class name="phoenix_api_automation_framework.UserdetailAPI_Test"/>
+       <class name="phoenix_api_automation_framework.CountAPITest"/>
+       <class name="phoenix_api_automation_framework.MasterAPI_Test"/>
+    </classes>
+  </test>
+
+</suite>
