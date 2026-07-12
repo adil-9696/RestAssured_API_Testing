@@ -7,8 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,13 +21,13 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: execute the code
-     run: mvn -DtestsuiteXmlFile=testng.xml -Denv=qa
+      run: mvn test -DsuiteXmlFile=testng.xml -Denv=qa
 
     - name: uploading artifacts
       uses: actions/upload-artifact@v7.0.1
       with: 
-        name:Surefire-reports
-        path=target/Surefire-reports
+        name: Surefire-reports
+        path: target/Surefire-reports
 
      
     
