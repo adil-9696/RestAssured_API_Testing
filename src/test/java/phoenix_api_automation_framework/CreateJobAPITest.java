@@ -34,8 +34,8 @@ public class CreateJobAPITest {
 		Customer customer = new Customer("Bat", "man", "8888111111", "", "random1233@gmail.com", "");
 		Customer_Address customer_address = new Customer_Address("2344", "Galaxy", "Baker street 2111", "Baker street",
 				"Goa", "11111", "India", "Goa");
-		Customer_Product customer_product = new Customer_Product(DateTimeUtil.getTimewithDaysAgo(10), "89965141317233",
-				"89965141317233", "89965141317233", DateTimeUtil.getTimewithDaysAgo(10), Product.NEXUS_2.getCode(),
+		Customer_Product customer_product = new Customer_Product(DateTimeUtil.getTimewithDaysAgo(10), "09965141301233",
+				"09965141301233", "09965141301233", DateTimeUtil.getTimewithDaysAgo(10), Product.NEXUS_2.getCode(),
 				Model_name.Nexus2_blue.getCode());
 		List<Problem> problemlist = new ArrayList<Problem>();
 
