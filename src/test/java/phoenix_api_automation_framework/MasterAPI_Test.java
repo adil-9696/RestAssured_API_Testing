@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class MasterAPI_Test {
 
-	@Test
+	@Test(description="to verify MasterAPI", groups= {"api","regression","smoke"})
 	public void verifymasterAPI()
 	{
              given().spec(SpecUtil.requestspecwithAuth(Roles.FD))

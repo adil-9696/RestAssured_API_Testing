@@ -14,18 +14,14 @@ import io.restassured.http.Header;
 
 public class UserdetailAPI_Test {
 
- 
-	@Test
+	@Test(description = "to verify Userdetail API", groups = { "api", "regression", "smoke" })
 	public void userdetailAPI_Test() {
 
-	
-	given().spec(SpecUtil.requestspecwithAuth(Roles.FD))
-	
-	.when().get("userdetails").
-	then()
-	.spec(SpecUtil.responsespec())
-	.body("message",Matchers.equalTo("Success"));
-	
+		given().spec(SpecUtil.requestspecwithAuth(Roles.FD))
+
+				.when().get("userdetails").then().spec(SpecUtil.responsespec())
+				.body("message", Matchers.equalTo("Success"));
+
 	}
- 
+
 }
