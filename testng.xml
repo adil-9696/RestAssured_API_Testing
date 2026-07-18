@@ -6,8 +6,8 @@
        <class name="phoenix_api_automation_framework.CountAPITest"/>
        <class name="phoenix_api_automation_framework.MasterAPI_Test"/>
         <class name="phoenix_api_automation_framework.CreateJobAPITest"/>
-         <class name="com.api.phoenix.datadriven_Tests.LoginAPITest.java"/>
-         <class name="com.api.phoenix.datadriven_Tests.CreateJobAPITest.java"/>
+         <class name="com.api.phoenix.datadriven_Tests.LoginAPITest"/>
+         <class name="com.api.phoenix.datadriven_Tests.CreateJobAPITest"/>
          
     </classes>
   </test>
