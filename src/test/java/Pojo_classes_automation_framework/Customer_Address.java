@@ -12,6 +12,9 @@ public class Customer_Address {
 	private String state;
 	
 	
+	public Customer_Address() {
+		super();
+	}
 	
 	public Customer_Address(String flat_number, String apartment_name, String street_name, String landmark, String area,
 			String pincode, String country, String state) {
@@ -72,6 +75,12 @@ public class Customer_Address {
 	}
 	public void setState(String state) {
 		this.state = state;
+	}
+	@Override
+	public String toString() {
+		return "Customer_Address [flat_number=" + flat_number + ", apartment_name=" + apartment_name + ", street_name="
+				+ street_name + ", landmark=" + landmark + ", area=" + area + ", pincode=" + pincode + ", country="
+				+ country + ", state=" + state + "]";
 	}
 	
 	

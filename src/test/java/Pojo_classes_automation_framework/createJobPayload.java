@@ -18,7 +18,9 @@ public class createJobPayload {
 	
 	
 	
-	
+	public createJobPayload() {
+		super();
+	}
 	public createJobPayload(int mst_service_location_id, int mst_platform_id, int mst_warrenty_status_id,
 			int mst_oem_id, Customer customer, Customer_Address customer_address, Customer_Product customer_product,
 			List<Problem> problems) {

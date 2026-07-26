@@ -17,7 +17,7 @@ public class CreateJobAPITest {
 
 	
 	@Test(description="verify createjobAPI", groups= {"api","regression","smoke"},dataProviderClass = com.api.phoenix_DataProviders.dataProviders.class,
-			dataProvider="createjobAPIdataprovider")
+			dataProvider="fakedatacreatejob")
 	public void verifycreateJobDatadriven(createJobPayload reqbody ) {
 
 		given().spec(SpecUtil.requestspecwithAuth(Roles.FD, reqbody)).when().post("/job/create/").then()
