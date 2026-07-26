@@ -34,7 +34,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-        
+
+    - name: creating .env file
+      run: | 
+            echo "DB_URL=${{ secrets.DB_URL }}" >> .env
+            echo "DB_Username=${{ secrets.DB_Username }}" >> .env
+            echo "DB_Password=${{ secrets.DB_Password }}" >> .env
+    
     - name: Default values for execution
       id: default
       run: | 
@@ -42,7 +48,7 @@ jobs:
         echo "env=${{github.event.inputs.env || 'qa'}}" >>$GITHUB_OUTPUT
     
     - name: execute the code
-      run: mvn test -DsuiteXmlFile="${{steps.default.outputs.suiteXMLFile}}" -Denv="${{steps.default.outputs.env}}"
+      run: mvn test -DsuiteXmlFile="${{steps.default.outputs.suiteXmlFile}}" -Denv="${{steps.default.outputs.env}}"
 
     - name: uploading artifacts
       if: always()
