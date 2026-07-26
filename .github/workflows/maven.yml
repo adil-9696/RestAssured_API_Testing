@@ -17,7 +17,7 @@ on:
       suiteXmlFile:
         description: Testng Xml file
         type: choice
-        options: [testng.xml, regression.xml]
+        options: [testng.xml, regression.xml,testng-db.xml]
         default: testng.xml
         required: true
   
