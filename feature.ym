@@ -1,0 +1,55 @@
+name: API_Testing_Rest_Assured_Demo_appication
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+    
+  workflow_dispatch:
+    inputs:
+      env:
+        description: Environment
+        type: choice
+        options: [qa, dev, uat]
+        default: qa
+        required: true
+      suiteXmlFile:
+        description: Testng Xml file
+        type: choice
+        options: [testng.xml, regression.xml,testng-db.xml]
+        default: testng.xml
+        required: true
+  
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+        
+    - name: Default values for execution
+      id: default
+      run: | 
+        echo "suiteXmlFile=${{github.event.inputs.suiteXmlFile || 'testng.xml'}}" >>$GITHUB_OUTPUT
+        echo "env=${{github.event.inputs.env || 'qa'}}" >>$GITHUB_OUTPUT
+    
+    - name: execute the code
+      run: mvn test -DsuiteXmlFile="${{steps.default.outputs.suiteXMLFile}}" -Denv="${{steps.default.outputs.env}}"
+
+    - name: uploading artifacts
+      if: always()
+      uses: actions/upload-artifact@v7.0.1
+      with: 
+        name: Surefire-reports
+        path: target/surefire-reports
+
+     
+    

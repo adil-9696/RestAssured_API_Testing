@@ -10,19 +10,15 @@ import com.utils.SpecUtil;
 
 import Pojo_classes_automation_framework.createJobPayload;
 
-public class CreateJobAPITest {
+public class CreateJobAPIJSONTest {
 
-	
-	
-
-	
-	@Test(description="verify createjobAPI", groups= {"api","regression","smoke"},dataProviderClass = com.api.phoenix_DataProviders.dataProviders.class,
-			dataProvider="fakedatacreatejob")
-	public void verifycreateJobDatadriven(createJobPayload reqbody ) {
+	@Test(description = "verify createjobAPI", groups = { "api", "regression",
+			"smoke" }, dataProviderClass = com.api.phoenix_DataProviders.dataProviders.class, dataProvider = "createJobJsonDataProvider")
+	public void verifycreateJobDatadriven(createJobPayload reqbody) {
 
 		given().spec(SpecUtil.requestspecwithAuth(Roles.FD, reqbody)).when().post("/job/create/").then()
 				.spec(SpecUtil.responsespec()).body("message", Matchers.equalTo("Job created successfully. "))
-				.body("data.job_number",Matchers.startsWith("JOB_"));
+				.body("data.job_number", Matchers.startsWith("JOB_"));
 
 	}
 

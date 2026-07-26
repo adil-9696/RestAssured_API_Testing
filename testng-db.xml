@@ -1,0 +1,10 @@
+<suite name="Suite-2 database validation create job" verbose="1">
+  <test name="Rest_Assured_APIwithDBTests-Phoenix">
+    <classes>
+       
+         <class name="com.dbvalidation.tests.CreateJobAPITest"/>
+         
+    </classes>
+  </test>
+
+</suite>
