@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.mysql.cj.protocol.Resultset;
+import com.utils.EnvUtil;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
@@ -15,8 +16,8 @@ public class demo {
 	public static void main(String[] args) throws SQLException {
 
 			
-	Dotenv dot=Dotenv.load();
-		System.out.println(dot.get("DB_URL"));
+	
+		System.out.println(EnvUtil.getValue("DB_Username"));
 			
 			
 	}

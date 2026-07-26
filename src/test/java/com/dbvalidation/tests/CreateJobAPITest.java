@@ -51,16 +51,15 @@ public class CreateJobAPITest {
 	public void setupPayload() {
 		
 		
-		
+		String imei=Generate14digit_random.getNumber();
 	
 		 customer = new Customer("Bat", "man", "8888111111", "",
 		 "random1233@gmail.com", ""); 
 		 customer_address = new
 		 Customer_Address("2344", "Galaxy", "Baker street 2111", "Baker street",
 		 "Goa", "11111", "India", "Goa"); 
-		 customer_product = new Customer_Product(DateTimeUtil.getTimewithDaysAgo(10),"07364122841085" ,
-				
-				 "07364122841085", "07364122841085",DateTimeUtil.getTimewithDaysAgo(10),
+		 customer_product = new Customer_Product(DateTimeUtil.getTimewithDaysAgo(10),imei,imei,imei
+				,DateTimeUtil.getTimewithDaysAgo(10),
 		  Product.NEXUS_2.getCode(), Model_name.Nexus2_blue.getCode()); 
 		 
 		 
