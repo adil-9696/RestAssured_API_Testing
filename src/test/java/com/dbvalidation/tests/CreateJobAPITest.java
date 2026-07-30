@@ -62,12 +62,8 @@ public class CreateJobAPITest {
 				,DateTimeUtil.getTimewithDaysAgo(10),
 		  Product.NEXUS_2.getCode(), Model_name.Nexus2_blue.getCode()); 
 		 
-		 
-		 List<Problem>
-		  problemlist = new ArrayList<Problem>();
-		 
-		  
-		  
+			List<Problem> problemlist = new ArrayList<Problem>();
+
 		  Problem problem = new Problem(Problems.OVERHEATING.getCode(),
 		  "Heating Issue");
 		  

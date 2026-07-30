@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.*;
 
 import org.hamcrest.Matchers;
 
+import com.api.filter.SensitiveDataFilter;
 import com.constants.Roles;
 
 import io.restassured.builder.RequestSpecBuilder;
@@ -23,7 +24,8 @@ public static RequestSpecification requestspec(Object payload) {
 		.setBaseUri(ConfigManager.getProperty("BASEURI"))
 		.setAccept(ContentType.JSON)
 		.setBody(payload)
-		.log(LogDetail.URI).log(LogDetail.METHOD).log(LogDetail.BODY)
+		.addFilter(new SensitiveDataFilter())
+		//.log(LogDetail.URI).log(LogDetail.METHOD).log(LogDetail.BODY)
 		.build();
 		
 		return req;
@@ -36,7 +38,8 @@ public static RequestSpecification requestspecwithAuth(Roles role) {
 		.setBaseUri(ConfigManager.getProperty("BASEURI"))
 		.setAccept(ContentType.JSON)
 		.addHeader("Authorization", Authtoken_generator.getToken(role))
-		.log(LogDetail.URI).log(LogDetail.METHOD)
+	     .addFilter(new SensitiveDataFilter())
+		//.log(LogDetail.URI).log(LogDetail.METHOD)
 		.build();
 		
 		return req;
@@ -73,9 +76,10 @@ public static ResponseSpecification responsespec() {
 	  ResponseSpecification res=new ResponseSpecBuilder().expectContentType(ContentType.JSON)
 	  .expectStatusCode(200).
 	 expectResponseTime(Matchers.lessThan(1500L))
-	 .log(LogDetail.METHOD)
-	 .log(LogDetail.BODY)
-	  .build();
+				/*
+				 * .log(LogDetail.METHOD) .log(LogDetail.BODY)
+				 */
+	 .build();
 	 
 	  return res;
 	  

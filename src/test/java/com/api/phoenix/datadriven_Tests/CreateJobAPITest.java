@@ -14,8 +14,6 @@ public class CreateJobAPITest {
 
 	
 	
-
-	
 	@Test(description="verify createjobAPI", groups= {"api","regression","smoke"},dataProviderClass = com.api.phoenix_DataProviders.dataProviders.class,
 			dataProvider="fakedatacreatejob")
 	public void verifycreateJobDatadriven(createJobPayload reqbody ) {

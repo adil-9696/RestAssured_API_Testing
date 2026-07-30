@@ -1,24 +1,32 @@
 package phoenix_api_automation_framework;
 
-import static io.restassured.RestAssured.*;
-
 import org.hamcrest.Matchers;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.api.services.DashboardService;
 import com.constants.Roles;
-import com.utils.Authtoken_generator;
-import com.utils.ConfigManager;
 import com.utils.SpecUtil;
 
 import io.restassured.module.jsv.JsonSchemaValidator;
 
 public class CountAPITest {
 
+	
+private DashboardService service;;
+
+    @BeforeMethod
+	public void setup()
+	{
+		service=new DashboardService();
+	}
+	
 	@Test(description="to verify countAPI", groups= {"api","regression","smoke"})
 	public void verifyCountAPI()
 	{
-		given().spec(SpecUtil.requestspecwithAuth(Roles.FD))
-		.when().get("/dashboard/count")
+		//given().spec(SpecUtil.requestspecwithAuth(Roles.FD)).when().get("/dashboard/count")
+		
+		service.Count(Roles.FD)
 		.then()
 		.spec(SpecUtil.responsespec())
 		.body("message", Matchers.equalTo("Success"))
@@ -35,8 +43,9 @@ public class CountAPITest {
 	public void missingtoken_countAPI()
 	{
 		
-		given().spec(SpecUtil.requestspecwithMissingAuth())
-		.when().get("/dashboard/count")
+		//given().spec(SpecUtil.requestspecwithMissingAuth()).when().get("/dashboard/count")
+		
+		service.Count()
 		.then().spec(SpecUtil.responsespec(401));
 	}
 	
