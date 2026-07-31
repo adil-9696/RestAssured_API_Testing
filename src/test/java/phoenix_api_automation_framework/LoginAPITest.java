@@ -12,11 +12,19 @@ import com.utils.ConfigManager;
 import com.utils.SpecUtil;
 
 import Pojo_classes_automation_framework.logincred;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.*;
 
+@Epic("User Management")
+@Feature("Authentication")
 @Listeners(com.listeners.APITestListeners.class)
 public class LoginAPITest {
 	logincred reqbody;
@@ -28,6 +36,10 @@ public class LoginAPITest {
 		service=new AuthService();
 	}
 
+	
+	@Story("verfy login functionality of phoenix")
+	@Description("this test is to check if FD is able to login")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test(description = "verify LoginAPI", groups = { "api", "regression", "smoke" })
 	public void loginTest() {
 

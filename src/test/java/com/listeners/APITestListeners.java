@@ -9,6 +9,8 @@ import org.testng.ITestListener;
 import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 
+import com.utils.AllureEnvUtil;
+
 public class APITestListeners implements ITestListener {
 	
 	private static Logger logger=LogManager.getLogger(APITestListeners.class);
@@ -46,6 +48,8 @@ public class APITestListeners implements ITestListener {
 	
 	 public void onStart(ITestContext context) {
 		 logger.info("Phoenix Framework is starting!!!");
+		 AllureEnvUtil.setupEnvthings();
+		 
 		  }
 
 }
