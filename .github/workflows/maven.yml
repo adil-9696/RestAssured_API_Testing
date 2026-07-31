@@ -57,7 +57,7 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v4.1.0
       with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN_ACCESS }}
           publish_dir: target/site/allure-maven-plugin
       
     - name: uploading artifacts
