@@ -9,7 +9,7 @@ public class ConfigManager {
 	private static Properties prop=new Properties();
 	private static String path=null;
 	
-	private static String env=null;
+	public static String env=null;
 			
 	static
 	{   env=System.getProperty("env","qa");
