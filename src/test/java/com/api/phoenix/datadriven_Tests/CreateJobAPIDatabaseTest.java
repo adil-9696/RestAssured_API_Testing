@@ -22,7 +22,7 @@ public class CreateJobAPIDatabaseTest {
 	public void verifycreateJobDatadriven(createJobPayload reqbody ) {
 
 		given().spec(SpecUtil.requestspecwithAuth(Roles.FD, reqbody)).when().post("/job/create/").then()
-				.spec(SpecUtil.responsespec()).body("message", Matchers.equalTo("Job created successfully. "))
+				.spec(SpecUtil.responsespec()).log().all().body("message", Matchers.equalTo("Job created successfully. "))
 				.body("data.job_number",Matchers.startsWith("JOB_"));
 
 		

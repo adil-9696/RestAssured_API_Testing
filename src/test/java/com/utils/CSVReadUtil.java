@@ -20,6 +20,7 @@ public class CSVReadUtil {
 		    CSVReader readCSV=new CSVReader(ir);
 		    
 		    
+		    
 		  CsvToBean<T> beantemp=new CsvToBeanBuilder<T>(readCSV) 
 				  .withType(bean)
 		   .withIgnoreEmptyLine(true)

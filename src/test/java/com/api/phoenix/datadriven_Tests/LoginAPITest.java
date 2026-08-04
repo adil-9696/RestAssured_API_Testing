@@ -20,9 +20,8 @@ public class LoginAPITest {
 	
 	
 	@Test(description="loginAPIdatadriven testing",groups= {"smoke","regression"},dataProviderClass =com.api.phoenix_DataProviders.dataProviders.class
-			,dataProvider="loginAPIDataProvider")
+			,dataProvider="loginAPIDataProviderCSV")
 	public void LoginAPITestdataDriven(LoginBean b) {
-		
 		
 		given()
 		.spec(SpecUtil.requestspec(b))

@@ -19,6 +19,7 @@ import Pojo_classes_automation_framework.Customer_Address;
 import Pojo_classes_automation_framework.Customer_Product;
 import Pojo_classes_automation_framework.Problem;
 import Pojo_classes_automation_framework.createJobPayload;
+import Pojo_classes_automation_framework.logincred;
 
 public class FakerDataGenerator {
 
@@ -115,5 +116,11 @@ public class FakerDataGenerator {
 	return list;
 	}
 
+	
+	public static logincred generateLoginAPIfakedata()
+	{
+		logincred load=new logincred(faker.name().fullName(),faker.number().digits(10));
+		return load;
+	}
 	
 }

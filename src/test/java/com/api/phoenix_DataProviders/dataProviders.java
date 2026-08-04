@@ -21,7 +21,7 @@ import Pojo_classes_automation_framework.logincred;
 public class dataProviders {
 
 	
-	@DataProvider(name="loginAPIDataProvider")
+	@DataProvider(name="loginAPIDataProviderCSV")
 	public static Iterator<LoginBean> loginAPIdataprovider() {
 
 		Iterator<LoginBean> it=CSVReadUtil.readCSVtoBean("testdata/testdata_login.csv", LoginBean.class);
@@ -85,7 +85,7 @@ public class dataProviders {
 	@DataProvider(name="loginAPIExcelDataProvider")
 	public static Iterator<logincred> loginAPIdataproviderexcel() {
 
-		Iterator<logincred> it=ExcelReaderUtil.readexcelintoIterator();		
+		Iterator<logincred> it=ExcelReaderUtil.readexcelintoIterator("Login",logincred.class);		
 		return it;
 		
 	}
