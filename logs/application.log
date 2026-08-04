@@ -10780,3 +10780,248 @@ Description: verify createjobAPI
 Groups [regression, smoke, api] 
 Test is Passed: verifycreateJobDatadriven 
 Duration 207ms 
+Phoenix Framework is starting!!!
+Testing Class-Method : [TestClass name=class phoenix_api_automation_framework.LoginAPITest] 
+Starting the Test Method: loginTest 
+Description: verify LoginAPI 
+Groups [regression, smoke, api] 
+Calling Login method from Auth Service
+BaseURI: http://64.227.160.186:9000/v1/login
+HTTP Method: POST
+Accept: application/json, application/javascript, text/javascript, text/json
+Content-Type: application/json
+Request Body: {"username":"iamfd","Password":"[REDACTED]"}
+Response Body: {
+    "message": "Success",
+    "data": {
+        "token":"[REDACTED]"
+    }
+}
+Test is Skipped!!! : loginTest
+Testing Class-Method : [TestClass name=class phoenix_api_automation_framework.LoginAPITest] 
+Starting the Test Method: loginTest 
+Description: verify LoginAPI 
+Groups [regression, smoke, api] 
+Calling Login method from Auth Service
+BaseURI: http://64.227.160.186:9000/v1/login
+HTTP Method: POST
+Accept: application/json, application/javascript, text/javascript, text/json
+Content-Type: application/json
+Request Body: {"username":"iamfd","Password":"[REDACTED]"}
+Response Body: {
+    "message": "Success",
+    "data": {
+        "token":"[REDACTED]"
+    }
+}
+Test is Skipped!!! : loginTest
+Testing Class-Method : [TestClass name=class phoenix_api_automation_framework.LoginAPITest] 
+Starting the Test Method: loginTest 
+Description: verify LoginAPI 
+Groups [regression, smoke, api] 
+Calling Login method from Auth Service
+BaseURI: http://64.227.160.186:9000/v1/login
+HTTP Method: POST
+Accept: application/json, application/javascript, text/javascript, text/json
+Content-Type: application/json
+Request Body: {"username":"iamfd","Password":"[REDACTED]"}
+Response Body: {
+    "message": "Success",
+    "data": {
+        "token":"[REDACTED]"
+    }
+}
+Test is Failed!!! : loginTest  ):
+Error Message is : 1 expectation failed.
+JSON path message doesn't match.
+Expected: Succes
+  Actual: Success
+
+Exception is: 
+java.lang.AssertionError: 1 expectation failed.
+JSON path message doesn't match.
+Expected: Succes
+  Actual: Success
+
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:274)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:121)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at phoenix_api_automation_framework.LoginAPITest.loginTest(LoginAPITest.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Phoenix Framework is starting!!!
+Testing Class-Method : [TestClass name=class phoenix_api_automation_framework.LoginAPITest] 
+Starting the Test Method: loginTest 
+Description: verify LoginAPI 
+Groups [regression, smoke, api] 
+Calling Login method from Auth Service
+BaseURI: http://64.227.160.186:9000/v1/login
+HTTP Method: POST
+Accept: application/json, application/javascript, text/javascript, text/json
+Content-Type: application/json
+Request Body: {"username":"iamfd","Password":"[REDACTED]"}
+Response Body: {
+    "message": "Success",
+    "data": {
+        "token":"[REDACTED]"
+    }
+}
+Test is Passed: loginTest 
+Duration 5489ms 
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+BaseURI: http://64.227.160.186:9000/v1/login
+HTTP Method: POST
+Accept: application/json, application/javascript, text/javascript, text/json
+Content-Type: application/json
+Request Body: {"username":"iamfd","Password":"[REDACTED]"}
+Response Body: {
+    "message": "Success",
+    "data": {
+        "token":"[REDACTED]"
+    }
+}
+BaseURI: http://64.227.160.186:9000/v1/login
+HTTP Method: POST
+Accept: application/json, application/javascript, text/javascript, text/json
+Content-Type: application/json
+Request Body: {"username":"adil","Password":"[REDACTED]"}
+Response Body: {
+    "status": 500,
+    "message": "Invalid username or password",
+    "name": "APIError",
+    "isPublic": false,
+    "isOperational": true
+}
+BaseURI: http://64.227.160.186:9000/v1/login
+HTTP Method: POST
+Accept: application/json, application/javascript, text/javascript, text/json
+Content-Type: application/json
+Request Body: {"username":"jatin","Password":"[REDACTED]"}
+Response Body: {
+    "status": 500,
+    "message": "Invalid username or password",
+    "name": "APIError",
+    "isPublic": false,
+    "isOperational": true
+}
+Checking if Vault is up :)
+Vault is Down!!!! ):
+Reading from Dot env file
+Checking if Vault is up :)
+Vault is Down!!!! ):
+Reading from Dot env file
+Checking if Vault is up :)
+Vault is Down!!!! ):
+Reading from Dot env file
+Checking if Vault is up :)
+Vault is Down!!!! ):
+Reading from Dot env file
+Checking if Vault is up :)
+Vault is Down!!!! ):
+Reading from Dot env file
+Checking if Vault is up :)
+Vault is Down!!!! ):
+Reading from Dot env file
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.
+POI does not currently support template.main+xml (glossary) parts.  Skipping this part for now.

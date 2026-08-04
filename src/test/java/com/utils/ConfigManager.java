@@ -16,6 +16,9 @@ public class ConfigManager {
 		env=env.toLowerCase().trim();
 		
 		switch(env) {
+		
+		//used arrrow feature of Java14
+		
 		case "dev" ->path="Config/config.dev.properties";
 		case "qa" ->path="Config/config.qa.properties";
 		case "uat" -> path="Config/config.UAT.properties";

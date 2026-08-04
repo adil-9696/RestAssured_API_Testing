@@ -19,10 +19,10 @@ public class AuthService {
 	private static Logger logger = LogManager.getLogger(AuthService.class);
 	private static final String LOGIN_ENDPOINT = "login";
 
+	
 	public Response login(Object cred) {
 		logger.info("Calling Login method from Auth Service");
 		Response res = given().spec(SpecUtil.requestspec(cred)).when().post(LOGIN_ENDPOINT);
-		return res;
-	}
+		return res;	}
 
 }

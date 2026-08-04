@@ -18,15 +18,19 @@ public class JsonReaderUtil {
 	
 	public static <T> Iterator<T> readJSONtoPojoArray(String filepath,Class<T[]> clazz)
 	{
+		
+		
 		InputStream is=Thread.currentThread().getContextClassLoader().getResourceAsStream(filepath);
 		List<T> list=new ArrayList<T>();
+		
+		
 		ObjectMapper mapper=new ObjectMapper();
 		
 		try {
 			
 			T[] bodyarray=mapper.readValue(is, clazz);
 		
-			   list=Arrays.asList(bodyarray);  
+			list=Arrays.asList(bodyarray);  
 			
 		} catch (IOException e) {
 			
@@ -34,6 +38,7 @@ public class JsonReaderUtil {
 		}
 		
 		
-		return list.iterator();
+	return list.iterator();
+		
 	}
 }

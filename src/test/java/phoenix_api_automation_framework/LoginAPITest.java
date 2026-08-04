@@ -40,7 +40,7 @@ public class LoginAPITest {
 	@Story("verfy login functionality of phoenix")
 	@Description("this test is to check if FD is able to login")
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(description = "verify LoginAPI", groups = { "api", "regression", "smoke" })
+	@Test(description = "verify LoginAPI", groups = { "api", "regression", "smoke" },retryAnalyzer=com.api.retry.RetryAnalyzer.class)
 	public void loginTest() {
 
 		//given().spec(SpecUtil.requestspec(reqbody)).when().post("login").

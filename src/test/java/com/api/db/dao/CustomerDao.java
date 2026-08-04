@@ -38,6 +38,7 @@ public class CustomerDao {
 					result.getString("mobile_number_alt"), result.getString("email_id"),
 					result.getString("email_id_alt"), Integer.parseInt(result.getString("tr_customer_address_id")));
 			}	
+			
 		} catch (SQLException e) {
 
 			e.printStackTrace();

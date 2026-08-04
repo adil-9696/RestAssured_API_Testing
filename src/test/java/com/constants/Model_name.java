@@ -6,6 +6,7 @@ public enum Model_name {
 	Galaxy(2);
 	
 	int code;
+	
 	private Model_name(int code)
 	{
 		this.code=code;

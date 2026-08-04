@@ -47,6 +47,7 @@ public class DataManagerHCP {
 
 			synchronized (DataManagerHCP.class) {
 
+			 {
 				config = new HikariConfig();
 				config.setJdbcUrl(dbURL);
 				config.setUsername(Username);
@@ -54,7 +55,9 @@ public class DataManagerHCP {
 				config.setMaximumPoolSize(10);
 
 				ds = new HikariDataSource(config);
-			}
+			
+				}
+				}
 
 		}
 	}
